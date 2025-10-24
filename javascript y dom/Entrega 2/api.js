@@ -28,6 +28,8 @@ export async function showCards(container) {
       <p>type: ${item.type}</p>
       <br>
       <p>description: ${item.desc}</p>
+      <br>
+      <p>precio(usd): ${item.card_prices[0].cardmarket_price}</p>
       `
     })
     card.addEventListener('mouseleave', (e) => {

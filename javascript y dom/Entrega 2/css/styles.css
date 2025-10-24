@@ -4,30 +4,37 @@
   padding: 0;
 }
 
-.page-wrapper {
-  background-image: url("");
+body button {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+body {
+  font-family: sans-serif;
+}
+body .page-wrapper {
+  background-image: url("../images/DL-Generic-Background.webp");
   width: 100%;
   display: grid;
-  grid-template-areas: "title title" "main main" "deck deck";
+  grid-template-areas: "title title" "main main" "info info" "button button" "data data";
   gap: 1rem;
   height: 100vh;
 }
-.page-wrapper .title-container {
+body .page-wrapper .title-container {
   display: flex;
-  background-color: bisque;
+  background-color: rgba(173, 255, 255, 0.5);
   justify-content: center;
   align-items: center;
   grid-area: title;
   width: 100%;
   height: 2rem;
+  padding: 2rem;
 }
-.page-wrapper .title-container .title {
+body .page-wrapper .title-container .title {
   font-weight: bold;
   font-family: sans-serif;
-  padding: 1rem;
-  font-size: 1rem;
+  font-size: 2rem;
 }
-.page-wrapper .main {
+body .page-wrapper .main {
   grid-area: main;
   display: flex;
   justify-content: center;
@@ -35,26 +42,26 @@
   column-gap: 2rem;
   padding: 0 1rem;
 }
-.page-wrapper .main .cardDisplay-container {
+body .page-wrapper .main .cardDisplay-container {
   flex: 0 0 60%;
   overflow: auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
-.page-wrapper .main .info-container {
+body .page-wrapper .main .info-container {
   flex: 0 1 30%;
   padding: 1rem;
 }
-.page-wrapper .main .main-child {
-  background-color: bisque;
-  height: 30rem;
+body .page-wrapper .main .main-child {
+  background-color: rgba(173, 255, 255, 0.5);
+  height: 40rem;
 }
-.page-wrapper .section {
+body .page-wrapper .section {
   display: flex;
   flex-flow: column nowrap;
 }
-.page-wrapper .container {
+body .page-wrapper .container {
   display: none;
   flex-flow: column nowrap;
   background-image: url("../images/imagenAlerta2.webp");
@@ -63,24 +70,75 @@
   position: fixed;
   width: 50rem;
   overflow: auto;
-  height: 40rem;
+  height: 100vh;
   margin: auto;
   inset: 0;
   z-index: 10;
 }
-.page-wrapper .container .deck {
+body .page-wrapper .container .deck {
   padding: 2rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
-.page-wrapper .container .exit-deck-btn {
-  width: 10rem;
-  justify-self: end;
-  position: fixed;
-  bottom: 2rem;
-  left: 50%;
-  transform: translate(-50%);
+body .page-wrapper .container .exit-btn-background {
+  height: 10rem;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 20%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.4) 70%, transparent 100%);
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+body .page-wrapper .container .exit-btn-background .exit-deck-btn {
+  padding: 1rem 5rem;
+  align-self: center;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+body .page-wrapper .buttons-container {
+  grid-area: button;
+  display: flex;
+  justify-content: center;
+  column-gap: 1rem;
+}
+body .page-wrapper .buttons-container .getCardsBtn {
+  flex: 0 0 45%;
+}
+body .page-wrapper .buttons-container .deck-btn {
+  flex: 0 0 45%;
+}
+body .page-wrapper .buttons-container .btn {
+  background-color: transparent;
+  border: 1px solid rgb(0, 255, 255);
+  color: white;
+  height: 3rem;
+}
+body .page-wrapper .data {
+  grid-area: data;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  order: 3;
+  background-color: rgba(173, 255, 255, 0.5);
+}
+body .page-wrapper .data .data-fr {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+body .page-wrapper .data .buy-btn {
+  background-color: red;
+  border: none;
+  padding: 0.8rem 5rem;
+}
+body .page-wrapper .data .data-section {
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -13,7 +13,7 @@ export async function warning(url) {
     imageUrl: url,
     imageWidth: "10rem",
     imageHeight: "15rem",
-    background: "url(./images/imagenAlerta2.webp)",
+    background: "url('../images/DL-Generic-Background.webp')",
     confirmButtonText: "quitar!"
   })
 
@@ -23,7 +23,7 @@ export async function warning(url) {
       title: "Carta removida del mazo!",
       icon: "success",
       theme: "dark",
-      background: "url(./images/imagenAlerta2.webp)",
+      background: "url('../images/DL-Generic-Background.webp')",
     });
     return true;
   }

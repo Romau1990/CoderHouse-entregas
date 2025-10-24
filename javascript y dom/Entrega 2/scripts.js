@@ -1,4 +1,4 @@
-import { addToDeck, removeFromDeck, showCards } from './api.js'
+import { addToDeck, getResponse, removeFromDeck, showCards } from './api.js'
 import { warning, deckLimitReached } from './alerts.js';
 
 //variables necesarias ================================================================
@@ -9,6 +9,7 @@ let cardCounter = document.querySelector('.card-counter');
 let cardLimit = document.querySelector('.card-limit');
 let count = 0;
 let countLimit = 40;
+let totalPrice = 0; 
 cardCounter.textContent = count;
 cardLimit.textContent = 40;
 let deckBtn = document.querySelector('.deck-btn')
@@ -31,6 +32,7 @@ getCardsBtn.addEventListener('click', async (e) => {
 //botones de acceso y salida del deck ================================================
 deckBtn.addEventListener('click', (e) => {
   container.style.display = "flex"
+
 })
 
 exitDeckBtn.addEventListener('click', () => {
@@ -40,6 +42,8 @@ exitDeckBtn.addEventListener('click', () => {
 //añadimos la carta seleccionada a nuestro deck
 cardContainer.addEventListener('click', async (e) => {
   const card = e.target.closest('.card');
+
+  // capturamos el precio y los sumamos
   if (!card) return;
 
   /*Estructura de control que establece
