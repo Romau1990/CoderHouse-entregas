@@ -1,0 +1,30 @@
+@mixin flex-column{
+    display: flex; 
+    flex-flow: column nowrap;
+}
+
+@mixin textfont{
+    font-family: 'montserrat';
+    font-size: .8rem;
+}
+
+@mixin titlefont{
+    font-family: 'montserrat';
+    font-size: 1.2rem;
+}
+
+@mixin linkfont{
+    font-family: 'mw';
+    font-size: .8rem;
+}
+
+@mixin navfont{
+    font-family: 'montserrat';
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+@mixin smallfont{
+    font-family: 'mw';
+    font-size: .6rem;
+}

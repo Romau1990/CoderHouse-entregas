@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--aos.css-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--hover.css-->
+    <link href="https://cdn.jsdelivr.net/npm/hover.css@2.3.2/css/hover-min.css" rel="stylesheet">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!--styles.css-->
+    <link rel="stylesheet" href="../styles.css">
+    <meta name="description" content="mesas, sillas, sillones, placares y mucho más con la mejor madera.">
+    <link rel="icon" href="../logo/flaticon.png">
+    <title>Productos</title>
+</head>
+
+<body>
+    <img class="background-img" src="../images/background-img/background2.webp" alt="background image">
+
+    <!--HEADER-->
+    <header class="header" id="page-top">
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img class="nav-logo" src="../images/logo/logo_Transparent.png"
+                        alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="products.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="services.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="about-us.html">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="contact.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item" aria-current="page">Productos</li>
+        </ol>
+
+
+
+    </header>
+
+    <div class="product__page-wrapper">
+        <aside class="product__aside">
+            <section class="hidden-filterbar">
+                <div class="container-fluid filterbar">
+                    <div class="nav-item dropdown">
+                        <button class="nav-link filter-button" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown <img src="resources/filter.png" alt="" width="17px">
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                    <form class="d-flex" role="search">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn filter-button" type="submit">Search</button>
+                    </form>
+                </div>
+            </section>
+
+
+
+
+
+            <div class="product__categories">
+                <p class="product__categories__title">Choose category:</p>
+                <div class="product__categories__options">
+                    <div class="category__option">
+                        <input class="category-checkbox" type="checkbox"><span class="category__product">Product1</span>
+                    </div>
+                    <div class="category__option">
+                        <input class="category-checkbox" type="checkbox"><span class="category__product">Product2</span>
+                    </div>
+                    <div class="category__option">
+                        <input class="category-checkbox" type="checkbox"><span class="category__product">Product3</span>
+                    </div>
+                    <div class="category__option">
+                        <input class="category-checkbox" type="checkbox"><span class="category__product">Product4</span>
+                    </div>
+                    <div class="category__option">
+                        <input class="category-checkbox" type="checkbox"><span class="category__product">Product5</span>
+                    </div>
+                </div>
+
+                <p class="product__categories__title">order by:</p>
+                <div class="product__order-by">
+                    <div class="category__option">
+                        <input class="category-checkbox" type="checkbox"><span class="category__product">Quality</span>
+                    </div>
+                    <div class="category__option">
+                        <input class="category-checkbox" type="checkbox"><span class="category__product">Size</span>
+                    </div>
+                    <div class="category__option">
+                        <input class="category-checkbox" type="checkbox"><span class="category__product">Weight</span>
+                    </div>
+                    <div class="category__option">
+                        <input class="category-checkbox" type="checkbox"><span class="category__product">type of
+                            wood</span>
+                    </div>
+                </div>
+
+                <p class="product__categories__title">Choose price range:</p>
+                <div class="product__price__range">
+                    <span>$0</span><input type="range" class="price__range"><span>$1000</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="product__main">
+            <h1 class="product__main__title">Productos</h1>
+
+            <div class="product__main__cards">
+
+                <div class="product__card" data-aos="fade-up">
+                    <div class="hvr-float">
+                        <p class="product__card__title"><strong>Mesa robusta y artesanal</strong></p>
+                        <img class="product__card__img" src="../images/products/wood-table.webp" alt="" width="450px">
+                        <p class="product__card__description">Hecha con madera natural de primera calidad. Perfecta para
+                            darle un toque cálido y auténtico a cualquier ambiente.</p>
+                        <div class="product__card__price-container">
+                            <span class="product__card__price">$$$</span><span class="product__card__discount"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product__card" data-aos="fade-up">
+                    <div class="hvr-float">
+                        <p class="product__card__title"><strong>Mesa robusta y artesanal</strong></p>
+                        <img class="product__card__img" src="../images/products/product-2.webp" alt="" width="450px">
+                        <p class="product__card__description">Hecha con madera natural de primera calidad. Perfecta para
+                            darle un toque cálido y auténtico a cualquier ambiente.</p>
+                        <div class="product__card__price-container">
+                            <span class="product__card__price">$$$</span><span class="product__card__discount"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product__card" data-aos="fade-up">
+                    <div class="hvr-float">
+                        <p class="product__card__title"><strong>Mesa ratona</strong></p>
+                        <img class="product__card__img" src="../images/products/product3.jpg" alt="" width="450px">
+                        <p class="product__card__description">Diseño rústico con estilo: estructura de madera maciza y
+                            tapa
+                            de vidrio templado. Ideal para salas modernas con un toque natural y elegante.</p>
+                        <div class="product__card__price-container">
+                            <span class="product__card__price">$$$</span><span class="product__card__discount"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product__card" data-aos="fade-up">
+                    <div class="hvr-float">
+                        <p class="product__card__title"><strong>Sillones de Jardín Rústicos</strong></p>
+                        <img class="product__card__img" src="../images/products/product4.webp" alt="" width="450px">
+                        <p class="product__card__description">Confort al aire libre con estilo natural. Estructura
+                            robusta
+                            de madera tratada para exterior, diseño artesanal y terminaciones rústicas que combinan con
+                            cualquier espacio verde.</p>
+                        <div class="product__card__price-container">
+                            <span class="product__card__price">$$$</span><span class="product__card__discount"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product__card" data-aos="fade-up">
+                    <div class="hvr-float">
+                        <p class="product__card__title"><strong>Sillas de Comedor de Madera</strong></p>
+                        <img class="product__card__img" src="../images/products/product5.webp" alt="" width="450px">
+                        <p class="product__card__description">Diseño clásico y resistente. Fabricadas en madera maciza,
+                            con
+                            respaldo ergonómico y acabado natural que aporta calidez y elegancia a cualquier comedor.
+                        </p>
+                        <div class="product__card__price-container">
+                            <span class="product__card__price">$$$</span><span class="product__card__discount"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product__card" data-aos="fade-up">
+                    <div class="hvr-float">
+                        <p class="product__card__title"><strong>Sillón de Living Elegante</strong></p>
+                        <img class="product__card__img" src="../images/products/product6.webp" alt="" width="450px">
+                        <p class="product__card__description">Estructura sólida de madera noble con detalles finos.
+                            Tapizado
+                            cómodo y sofisticado. Ideal para dar un toque distinguido y acogedor a tu espacio principal.
+                        </p>
+                        <div class="product__card__price-container">
+                            <span class="product__card__price">$$$</span><span class="product__card__discount"></span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="product__card" data-aos="fade-up">
+                    <div class="hvr-float">
+                        <p class="product__card__title"><strong>Sillón de Living con Posavasos Integrados</strong></p>
+                        <img class="product__card__img" src="../images/products/product7.webp" alt="" width="450px">
+                        <p class="product__card__description">Diseño funcional y moderno. Cuenta con apoyabrazos anchos.
+                            Comodidad y practicidad en un solo mueble.</p>
+                        <div class="product__card__price-container">
+                            <span class="product__card__price">$$$</span><span class="product__card__discount"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product__card" data-aos="fade-up">
+                    <div class="hvr-float">
+                        <p class="product__card__title"><strong>Placard de Living Rústico</strong></p>
+                        <img class="product__card__img" src="../images/products/product8.webp" alt="" width="450px">
+                        <p class="product__card__description">Estilo robusto y cálido, fabricado en madera maciza con
+                            vetas
+                            naturales. Perfecto para guardar vajilla, libros o textiles, sumando carácter y
+                            funcionalidad a
+                            tu espacio.</p>
+                        <div class="product__card__price-container">
+                            <span class="product__card__price">$$$</span><span class="product__card__discount"></span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="product__card" data-aos="fade-up">
+                    <div class="hvr-float">
+                        <p class="product__card__title"><strong>Placard Rústico de 4 Puertas</strong></p>
+                        <img class="product__card__img" src="../images/products/product9.webp" alt="" width="450px">
+                        <p class="product__card__description">Diseño imponente y artesanal, hecho en madera maciza.
+                            Ofrece
+                            gran capacidad de guardado con estantes, ideal para mantener todo en orden con estilo
+                            rústico.
+                        </p>
+                        <div class="product__card__price-container">
+                            <span class="product__card__price">$$$</span><span class="product__card__discount"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <section class="footer__section footer__contact">
+            <p class="footer__contact__title footer__title">Contact</p>
+            <div class="contact-data">
+                <p class="contact-data__number">+98 434 127</p>
+                <p class="contact-data__address">Luis alberto de Herrera 4321</p>
+                <p class="contact-data__email">woodlandUy@gmail.com</p>
+                <iframe class="contact-data__map"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31143.40702790405!2d-56.15295074177378!3d-34.867597733719066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suy!4v1748803303803!5m2!1sen!2suy"
+                    sandbox="allow-scripts" title="mapa de nuestra dirección física" width="300" height="200"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <section class="footer__section footer__faqs">
+            <p class="footer__faqs__title footer__title">FAQS</p>
+            <div class="faqs__links">
+                <a href="" class="footer__faqs__link">¿Hacen muebles a medida?</a>
+                <a href="" class="footer__faqs__link">¿Que tipos de madera utilizan?</a>
+                <a href="" class="footer__faqs__link">¿Cual es el tiempo de demora estimado?</a>
+                <a href="" class="footer__faqs__link">¿Cuanto tiempo de garantia tienen los productos?</a>
+            </div>
+        </section>
+
+        <section class="footer__section footer__social-icons">
+            <p class="social-icons__title footer__title">Social networks</p>
+            <div class="social__icons">
+                <img src="../resources/facebook.png" alt="" class="social__icon" width="35px">
+                <img src="../resources/instagram.png" alt="" class="social__icon" width="35px">
+                <img src="../resources/youtube.png" alt="" class="social__icon" width="42px">
+            </div>
+        </section>
+
+        <section class="copyright__section">
+            <p>© 2014 - 2025 - Tiendamia - Todos los derechos reservados - Todas las marcas son propiedad de sus
+                respectivos dueños</p>
+        </section>
+    </footer>
+    <a href="#page-top" aria-label="flecha para ir hacia arriba" class="page-anchor hvr-float"><img
+            src="../resources/arrows.png" width="50px" alt="flecha para arriba"></a>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+        </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="module" src="scripts.js" defer></script>
+  <title>trade card game</title>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!--titulo de la web-->
+    <section class="title-container">
+      <h1 class="title">Trade card game</h1>
+    </section>
+
+    <!--aca aparecerán las cartas y se mostrará la información de las mismas-->
+    <main class="main">
+      <section class="cardDisplay-container main-child"></section>
+      <section class="info-container main-child"></section>
+    </main>
+
+    <!--aca apareceran las cartas que yo elija del card display-->
+    <!-- <section class="deck-container"></section> -->
+
+    <button class="getCardsBtn">get cards</button>
+    <button class="deck-btn">deck</button>
+
+    <section class="container">
+      <div class="deck"></div> <!--aca van las cartas-->
+      <button class="exit-deck-btn">exit</button>
+    </section>
+
+    <div class="card-number">
+      <span class="card-counter"></span> <span>/</span> <span class="card-limit"></span>
+    </div>
+  </div>
+</body>
+</html>
