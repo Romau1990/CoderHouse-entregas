@@ -1,8 +1,7 @@
 import './App.css'
 import {useState} from 'react'; //fundamental para poder renderizar cualquier cosa en pantalla. Es un recurso que toma de node_modules
 import NavBar from './components/navBar';
-import CartWidget from './components/CartWidget';
-
+import Container from './components/container';
 
 
 
@@ -20,8 +19,10 @@ function App() {
     <>
       {/* la notacion < nombreFuncion /> es la forma de decir donde se renderizará la informacion  */}
       <NavBar/> 
+      {/* container es como un objeto al cual le agrego una propiedad llamada saludo. Solo los strings no llevan {} por eso 21 si va entre corchetes */}
       <p>Counter: {counter}</p>
       <p>Nombre: {nombre}</p>
+      <Container saludo = "hola mundo geek" dia = {21}/> 
       {/* los estados se reinician cuando recargo la página */}
       <button onClick= { () => setCounter(counter+1) }>incrementar</button>
       <button onClick ={ () => setNombre(nombre = "Rodolfo") }>cambiar nombre</button> 
