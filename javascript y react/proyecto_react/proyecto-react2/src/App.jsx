@@ -1,33 +1,47 @@
+
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Box from './Box/Box.jsx'
+import Promesas from './Promesas/Promesas.jsx'
+import Map from './Map/Map.jsx'
+import ToDoList from './ToDoList/ToDoList.jsx'
+import YugiohApi from './YugiohApi/yugiohApi.jsx'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <BrowserRouter>
+        <Routes>
+          {/* herramienta fakeStore API */}
+          {/* asi luce un enrutamiento de componente */}
+          {/* <Route path="/" element={<Home />} />  */}
+          {/* <Route path="/about" element={<About />} /> */}
+
+          <Route />
+
+        {/* <Box cont="container">
+          <h1>Titulo</h1>
+          <div>
+          <p>Parrafo</p>
+          <img src="#" alt="" />
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi totam dolor, aliquam consequuntur laudantium commodi illo a magnam perferendis. Culpa?</p>
+          </div>
+        </Box> */}
+
+        {/* <Promesas  /> */}
+
+        {/* {/* <Map /> */}
+        {/* <ToDoList /> */ }
+
+        {/* <RefListPres /> */}
+        </Routes>
+
+        <YugiohApi />
+      </BrowserRouter>
     </>
   )
 }
