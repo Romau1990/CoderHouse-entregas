@@ -1,0 +1,1 @@
+## api usada:  IGDB (Internet Game Database) ##
