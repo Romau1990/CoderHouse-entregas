@@ -1,37 +1,8 @@
-import React, { useEffect, useState } from 'react'
-
-
-// export default function seeMore(props) {
-//   let {img, info} = props;
-//   return (
-//     <div className="see-more-container">
-//         <img className="see-more-img" src={img} alt="" />
-//         <p className="see-more-info">{info}</p>
-//         <button className="see-more-close">close</button>
-//     </div>
-//   )
-// }
-
-
-
-// useEffect(() => {
-//     let alertResp = async () => {
-//         let alertData = await swalWithBootstrapButtons;
-//         setAlert(alertData)
-//     }
-//     alertResp()
-// }, [])
-
-
-
-
+import React from 'react'
 
 
 export default function SeeMore(props) {
     let { img, desc } = props;
-    let [alert, setAlert] = useState(null)
-
-
 
     let fireAlert = () => {
 
@@ -54,9 +25,6 @@ export default function SeeMore(props) {
         });
 
     }
-
-
-
 
     return (
         <div>

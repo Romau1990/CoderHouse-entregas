@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import "./Card.css"
 import SeeMore from '../SeeMore/SeeMore';
 
+
 export default function Card(props) {
     const { cardName, cardImg, cardDesc, cardPrice } = props;
     let [counter, setCounter] = useState(0);

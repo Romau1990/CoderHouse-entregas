@@ -1,0 +1,17 @@
+.cart-container{
+    display: flex; 
+    gap: 1rem;
+}
+
+
+.products-container{
+    border: 2px solid black; 
+    height: fit-content; 
+    flex: 1 1 45%;
+}
+
+.customer-info-container{
+    flex: 1 1 45%;
+    height: fit-content;
+    border: 2px solid black;
+}
