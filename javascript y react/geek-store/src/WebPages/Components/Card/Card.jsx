@@ -1,26 +1,31 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Card.css"
 import SeeMore from '../SeeMore/SeeMore';
 
 
 export default function Card(props) {
-    const { cardName, cardImg, cardDesc, cardPrice } = props;
+    const { cardName, cardImg, cardDesc, cardPrice,total, setTotal} = props;
     let [counter, setCounter] = useState(0);
     let [updatePrice, setUpdatePrice] = useState(cardPrice)
+    const priceValue = parseFloat(cardPrice);
 
     let toDecrase = () => {
         if (counter > 0) {
-            setCounter(--counter)
+            setCounter(counter - 1)
             setUpdatePrice(updatePrice - cardPrice)
+            setTotal(totalAnterior => totalAnterior - priceValue == 0 ? 0 : totalAnterior - priceValue);
         }
     }
 
     let toIncrease = () => {
-        setCounter(++counter) 
-        if(counter >= 1){
+        setCounter(counter + 1)
+        if (counter >= 1) {
             setUpdatePrice((cardPrice * counter).toFixed(2))
         }
+        setTotal(totalAnterior => totalAnterior + priceValue);
     }
+
+    const totalPrice = (priceValue * counter).toFixed(2);
 
     return (
         <div className="card">
@@ -33,7 +38,7 @@ export default function Card(props) {
                     <button onClick={toDecrase} className="card-btn">-</button><span>{counter}</span><button onClick={toIncrease} className="card-btn">+</button>
                 </div>
                 <div>
-                    <span className="card-price">{updatePrice}</span>
+                    <span className="card-price">${counter > 0 ? totalPrice : cardPrice}</span>
                 </div>
             </div>
             <button className="add-to-cart-btn">agregar al carrito</button>

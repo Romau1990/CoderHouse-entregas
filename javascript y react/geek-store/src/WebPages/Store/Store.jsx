@@ -9,13 +9,14 @@ export function Store() {
 
   const [filterData, setFilterData] = useState([])
   const [term, setTerm] = useState('');
-  const [inputEmpty, setInputEmpty] = useState(true)
+  const [total, setTotal] = useState(0);
+
   let { data, err, loading } = useFetch("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=50&offset=0");
 
   let searchTerm = (e) => {
     setTerm(e.target.value)
 
-    if(e.target.value == ""){
+    if (e.target.value == "") {
       setFilterData(data)
     }
   }
@@ -39,18 +40,28 @@ export function Store() {
     setFilterData(data);
   }
 
-  if(searchTerm == ""){
+  if (searchTerm == "") {
     setFilterData(data)
   }
 
   return (
     <>
       <Filter action={toFilter} search={searchTerm} />
-
+      <p>total: {total.toFixed(2)}</p>
       <div className="card-container">
         {filterData.map(card => {
-          return <Card key={card.id} cardName={card.name} cardImg={card.card_images[0].image_url} cardDesc={card.desc} cardPrice={card.card_prices[0].cardmarket_price}></Card>
+
+          return <Card
+            key={card.id}
+            cardName={card.name}
+            cardImg={card.card_images[0].image_url}
+            cardDesc={card.desc}
+            cardPrice={card.card_prices[0].cardmarket_price}
+            total={total}
+            setTotal={setTotal}
+          ></Card>
         })}
+
       </div>
     </>
   )

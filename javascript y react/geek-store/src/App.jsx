@@ -13,7 +13,6 @@ function App() {
       <Home></Home>
       <Store></Store>
       <Contact></Contact>
-      <CartWidget></CartWidget>
     </div>
   )
 }
