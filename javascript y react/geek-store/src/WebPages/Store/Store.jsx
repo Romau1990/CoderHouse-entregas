@@ -3,6 +3,8 @@ import useFetch from '../../usefetch/UseFetch'
 import Filter from '../Components/Filter/Filter';
 import "./Store.css"
 import Card from '../Components/Card/Card';
+import Loader from '../Components/Loader/Loader';
+import CartWidget from '../Components/CartWidget/CartWidget';
 
 
 export function Store() {
@@ -33,7 +35,7 @@ export function Store() {
   }
 
   if (loading) {
-    return <p>loading cards...</p>
+    return <Loader />
   }
 
   if (filterData.length == 0) {
@@ -47,7 +49,7 @@ export function Store() {
   return (
     <>
       <Filter action={toFilter} search={searchTerm} />
-      <p>total: {total.toFixed(2)}</p>
+      <CartWidget total={total.toFixed(2)} />
       <div className="card-container">
         {filterData.map(card => {
 

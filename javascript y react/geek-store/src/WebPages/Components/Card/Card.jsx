@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import "./Card.css"
 import SeeMore from '../SeeMore/SeeMore';
+import useMessage from '../../../CustomHooks/useMessage';
+
 
 
 export default function Card(props) {
@@ -8,6 +10,17 @@ export default function Card(props) {
     let [counter, setCounter] = useState(0);
     let [updatePrice, setUpdatePrice] = useState(cardPrice)
     const priceValue = parseFloat(cardPrice);
+
+
+    let {trigger, err, loading} = useMessage("add to cart", "Sure you want to add this articles to the cart?", "sure", "added to the cart", "your item is now in the cart");
+ 
+    if(err){
+       return <p>{err.message}</p>
+    }
+    if(loading){
+        return <Loader />
+    }
+
 
     let toDecrase = () => {
         if (counter > 0) {
@@ -41,7 +54,7 @@ export default function Card(props) {
                     <span className="card-price">${counter > 0 ? totalPrice : cardPrice}</span>
                 </div>
             </div>
-            <button className="add-to-cart-btn">agregar al carrito</button>
+            <button onClick={trigger} className="add-to-cart-btn">agregar al carrito</button>
         </div>
     )
 }

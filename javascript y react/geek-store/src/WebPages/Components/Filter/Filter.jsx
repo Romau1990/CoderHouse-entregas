@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-
+import "./Filter.css"
 
 export default function Filter(props) {
     let {action, search} = props;
 
 
     return (
-        <div>
+        <div className="filter">
             <input type="text" onChange ={search} />
             <select name="" id="">
                 <option value="name">name</option>

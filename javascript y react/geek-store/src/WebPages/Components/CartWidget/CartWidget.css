@@ -1,0 +1,11 @@
+.cart-widget{
+    position: fixed; 
+    display: flex;
+    column-gap: 2rem;
+    justify-content: center;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+}
