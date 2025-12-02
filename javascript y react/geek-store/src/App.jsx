@@ -1,20 +1,23 @@
 import { useState } from 'react'
 import './App.css'
-import { BrowserRouter } from 'react-router-dom'
-import {Home, Contact, Store, Checkout} from "../src/WebPages/Index/Index"
-import CartWidget from './WebPages/Components/CartWidget/CartWidget'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Home, Contact, Store, Checkout } from "../src/WebPages/Index/Index"
+import NavBar from './WebPages/Components/NavBar/NavBar';
 
 
-
-function App() {  
+function App() {
 
   return (
-    <div>
-      <Home></Home>
-      <Store></Store>
-      <Checkout></Checkout>
-      <Contact></Contact>
-    </div>
+    <BrowserRouter>
+      <NavBar/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/store" element={<Store />} />
+        <Route path="/checkout" element={<Checkout /> } />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
+
   )
 }
 

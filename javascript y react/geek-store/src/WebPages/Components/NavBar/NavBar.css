@@ -1,0 +1,41 @@
+
+.navBar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    
+    background-color: #282c34;
+    color: white;
+    
+    height: auto;
+    padding: 1rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); 
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.navBar-links {
+    display: flex;
+    gap: 30px;
+    font-family: sans-serif;
+}
+
+.navBar-link {
+    color: #61dafb;
+    text-decoration: none; 
+    font-size: 1rem;
+    font-weight: 500;
+    
+
+    transition: color 0.3s ease-in-out;
+}
+
+.navBar-link:hover {
+    color: white;
+}

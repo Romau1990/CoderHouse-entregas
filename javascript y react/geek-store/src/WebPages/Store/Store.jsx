@@ -12,9 +12,9 @@ export function Store() {
   const [filterData, setFilterData] = useState([])
   const [term, setTerm] = useState('');
   const [total, setTotal] = useState(0);
-
   let { data, err, loading } = useFetch("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=50&offset=0");
 
+  
   let searchTerm = (e) => {
     setTerm(e.target.value)
 
