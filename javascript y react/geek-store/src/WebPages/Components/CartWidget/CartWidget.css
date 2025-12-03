@@ -6,6 +6,12 @@
     bottom: 0;
     right: 0;
     left: 0;
+    z-index: 100;
     background-color: rgb(255, 255, 255);
     padding: 1rem;
+}
+
+.total-display{
+    color: black;
+    font-weight: bold;
 }

@@ -3,8 +3,8 @@ import './Checkout.css';
 
 
 export function Checkout(props) {
-    let {cartTotal} = props;
-    
+    let { cartTotal } = props;
+
     const handleSubmit = (e) => {
         e.preventDefault();
         alert(`Procesando pago de $${cartTotal}...`);
@@ -12,10 +12,9 @@ export function Checkout(props) {
 
     return (
         <div className="checkout-container">
-            <h1>Finalizar Compra</h1>
 
 
-            <div className="summary-box">
+            <div className="summary-section section">
                 <h2>Resumen del Pedido</h2>
 
                 <p className="final-total">
@@ -25,7 +24,7 @@ export function Checkout(props) {
             </div>
 
 
-            <section className="payment-section">
+            <section className="payment-section section">
                 <h3>Datos de Pago</h3>
 
                 <form className="payment-form" onSubmit={handleSubmit}>
@@ -42,7 +41,7 @@ export function Checkout(props) {
                     </div>
 
 
-                    <button type="submit" className="pay-button">
+                    <button type="submit" className="pay-button primary-button">
                         Pagar Ahora (${cartTotal})
                     </button>
                 </form>

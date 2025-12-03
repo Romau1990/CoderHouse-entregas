@@ -44,7 +44,6 @@ export default function Card(props) {
         <div className="card">
             <p className="card-name">{cardName}</p>
             <img className="card-img" src={cardImg} alt="" />
-            <a href="#" className="card-desc">see card description</a>
             <SeeMore img={cardImg} desc={cardDesc} />
             <div className="price-container">
                 <div className="card-number">

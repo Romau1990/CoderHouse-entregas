@@ -54,6 +54,7 @@ export function Store() {
         {filterData.map(card => {
 
           return <Card
+            className="card"
             key={card.id}
             cardName={card.name}
             cardImg={card.card_images[0].image_url}

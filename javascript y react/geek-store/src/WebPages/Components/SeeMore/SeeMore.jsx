@@ -28,7 +28,7 @@ export default function SeeMore(props) {
 
     return (
         <div>
-            <button onClick={fireAlert}>see more details</button>
+            <button className="button" onClick={fireAlert}>see more details</button>
         </div>
     )
 }

@@ -1,8 +1,11 @@
 .card-container{
     display: flex;
     flex-flow: row wrap;
-    background-color: bisque; 
     padding: 1rem; 
     gap: 1rem; 
     justify-content: center;
+}
+
+.card{
+    background-color: rgb(39, 39, 39)
 }

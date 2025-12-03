@@ -1,0 +1,26 @@
+.checkout-container{
+    display: flex; 
+    column-gap: 5rem;
+    height: 100vh;
+    max-width: 80rem;
+    padding: 1rem; 
+    margin: 8rem auto;
+}
+
+.section{
+    background-color: rgb(39, 39, 39);
+    padding: 2rem;
+}
+
+
+.summary-section{
+    flex: 1 1 100%;
+}
+
+.payment-section{
+    flex: 1 1 100%;
+}
+
+.pay-button{
+    font-weight: bold;
+}
