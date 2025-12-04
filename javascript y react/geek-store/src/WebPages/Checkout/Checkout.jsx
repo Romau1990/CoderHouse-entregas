@@ -1,11 +1,22 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Checkout.css';
 import { useLocation } from 'react-router-dom';
 
 
+
 export function Checkout() {
     const location = useLocation();
+    // traigo el valor total desde store
     const total = location.state ? location.state.totalPurchase : 0;
+    const [cardsInCart, setCardsInCart] = useState([])
+
+    useEffect(() => {
+        const localS = localStorage.getItem('cardsInCart');
+        if (localS) {
+            let cards = JSON.parse(localS);
+            setCardsInCart(cards);
+        }
+    }, [])
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -18,6 +29,20 @@ export function Checkout() {
 
             <div className="summary-section section">
                 <h2>Resumen del Pedido</h2>
+                <div className="chosen-cards-container">
+                    {cardsInCart.map(card => {
+                        return <div className="card-data">
+                            <img className="card-in-cart" src={card.card_images[0].image_url} alt="" />
+                            <div>
+                                <p>{card.name}</p>
+                                <div class="card-quantity">
+                                    <button className="add-remove-button">-</button><span>cantidad</span><button className="add-remove-button">+</button>
+                                </div>
+                                <button className="primary-button">quitar todas</button>
+                            </div>
+                        </div>
+                    })}
+                </div>
 
                 <p className="final-total">
                     Total a Pagar: <span>${total}</span>

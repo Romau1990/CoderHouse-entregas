@@ -12,9 +12,10 @@ export function Store() {
   const [filterData, setFilterData] = useState([])
   const [term, setTerm] = useState('');
   const [total, setTotal] = useState(0);
+  const [cardsInCart, setCardsInCart] = useState([])
   let { data, err, loading } = useFetch("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=50&offset=0");
 
-  
+
   let searchTerm = (e) => {
     setTerm(e.target.value)
 
@@ -29,6 +30,14 @@ export function Store() {
     })
     setFilterData(filteredData)
   }
+  
+  let addToCart = (card) => {
+    setCardsInCart([...cardsInCart, card])
+  }
+  
+  useEffect(() => {
+    localStorage.setItem('cardsInCart', JSON.stringify(cardsInCart));
+  },[cardsInCart])
 
   if (err) {
     return <p>there's been a problem loading the data. Try again</p>
@@ -55,6 +64,7 @@ export function Store() {
 
           return <Card
             className="card"
+            addToCart={() => addToCart(card)}
             key={card.id}
             cardName={card.name}
             cardImg={card.card_images[0].image_url}

@@ -24,3 +24,37 @@
 .pay-button{
     font-weight: bold;
 }
+
+/* cartas obtenidas del local storage */
+
+.chosen-cards-container{
+    display: flex; 
+    flex-flow: column nowrap;
+    row-gap: 2rem;
+}
+
+.card-data{
+    display: flex;
+    align-items:center;
+    column-gap: 3rem;
+}
+
+.card-quantity{
+    margin: 2rem 0;
+    
+    display: flex; 
+    column-gap: 1rem;
+    align-items: center;
+}
+
+.add-remove-button{
+    background-color: rgb(138, 16, 65);
+    border: none; 
+    border-radius: .1rem;
+    padding: 1rem;
+}
+
+.card-in-cart{
+    width:10rem;
+    height:auto;
+}
