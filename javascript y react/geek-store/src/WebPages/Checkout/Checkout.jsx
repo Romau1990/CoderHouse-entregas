@@ -4,11 +4,20 @@ import { useLocation } from 'react-router-dom';
 
 
 
+
 export function Checkout() {
     const location = useLocation();
-    // traigo el valor total desde store
+
     const total = location.state ? location.state.totalPurchase : 0;
     const [cardsInCart, setCardsInCart] = useState([])
+    const [cardCounter, setCardCounter] = useState(0)
+
+    useEffect(() => {
+        let getLocal = localStorage.getItem('counter');
+        let counter = JSON.parse(getLocal);
+        setCardCounter(counter)
+    }, [])
+
 
     useEffect(() => {
         const localS = localStorage.getItem('cardsInCart');
@@ -18,10 +27,13 @@ export function Checkout() {
         }
     }, [])
 
+
+
     const handleSubmit = (e) => {
         e.preventDefault();
         alert(`Procesando pago de $${total}...`);
     };
+
 
     return (
         <div className="checkout-container">
@@ -36,7 +48,7 @@ export function Checkout() {
                             <div>
                                 <p>{card.name}</p>
                                 <div class="card-quantity">
-                                    <button className="add-remove-button">-</button><span>cantidad</span><button className="add-remove-button">+</button>
+                                    <button className="add-remove-button">-</button><span>{cardCounter}</span><button className="add-remove-button">+</button>
                                 </div>
                                 <button className="primary-button">quitar todas</button>
                             </div>

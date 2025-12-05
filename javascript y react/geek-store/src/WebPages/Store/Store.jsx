@@ -7,6 +7,7 @@ import Loader from '../Components/Loader/Loader';
 import CartWidget from '../Components/CartWidget/CartWidget';
 
 
+
 export function Store() {
 
   const [filterData, setFilterData] = useState([])
@@ -54,6 +55,7 @@ export function Store() {
   if (searchTerm == "") {
     setFilterData(data)
   }
+
 
   return (
     <>
